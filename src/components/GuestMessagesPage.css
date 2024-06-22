@@ -1,0 +1,48 @@
+.messages-container {
+  background-image: url("/public/images/lovebg2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  /* background-color: #ff6ec7;  */
+}
+.name {
+  color: #333333;
+}
+.message {
+  color: black;
+}
+.scrolling-text {
+  position: absolute;
+  transform: translate(-100%, -100%); /* Center horizontally and vertically */
+  width: 70%;
+  animation: scrollUp 30s linear infinite;
+}
+
+@keyframes scrollUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+.message-item {
+  color: white; /* Ensure the text is visible */
+  text-align: center;
+  font-size: 1.5rem;
+}
+@media screen and (max-width: 600px) {
+  .scrolling-text {
+    width: 100%;
+  }
+  .message-item {
+    margin: 4rem;
+  }
+}
